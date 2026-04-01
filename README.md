@@ -17,24 +17,26 @@ pip install opencv-python numpy matplotlib
 ``` 
 
 ## Uso
-1. Coloca tu imagen
+1. Coloca tu imagen:
+   
 Guarda tu imagen (ejemplo: sunset.jpg) en la misma carpeta que el script.
 
-2. Ejecuta el script
+3. Ejecuta el script:
 ```  
 python rgb_a_cmy.py
 ```
 
-3. Resultado
+3. Resultado:
+   
 Se mostrarán dos imágenes lado a lado:
 * Del lado izquierdo la imagen original en RGB
 * Del lado derecho la imagen convertida a CMY
 
 Estructura del código
-Función	Descripción
-RGB2CMY(img)	Convierte imagen RGB a CMY (valores normalizados 0-1)
-cargar_imagen(ruta)	Carga imagen y la convierte de BGR a RGB
-visualizar_comparacion(rgb, cmy)	Muestra ambas imágenes para comparación
+Función
+* RGB2CMY(img) : Convierte imagen RGB a CMY (valores normalizados 0-1)
+* cargar_imagen(ruta):	Carga imagen y la convierte de BGR a RGB
+* visualizar_comparacion(rgb, cmy):	Muestra ambas imágenes para comparación
 
 Ejemplo
 ``` 
@@ -50,6 +52,7 @@ imagen_cmy = RGB2CMY(imagen)
 * Si la imagen no se encuentra, el script mostrará un error con sugerencias
 
 Autora: Natalia Rendón
+
 Curso: Procesamiento de Imágenes
 
 Fecha: Marzo 2024
