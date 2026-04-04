@@ -172,7 +172,65 @@ Procesamiento de Imágenes
 Fecha:
 Abril 2024
 
+# Transformación Lineal en Espacios de Color
 
+## Descripción:
+Script en Python para aplicar transformaciones lineales (escalado de brillo) a imágenes en diferentes espacios de color: RGB, CMY y HSI. La transformación multiplica los valores de los píxeles por una constante k, permitiendo aclarar u oscurecer la imagen de manera controlada. Es útil para ajustar el brillo y realizar operaciones de mejora de imagen.
+
+## Requisitos:
+Python 3.7 o superior
+
+Librerías:
+* opencv-python
+* numpy
+* matplotlib
+
+Instalación:
+``` 
+pip install opencv-python numpy matplotlib
+```
+
+## Uso
+1. Coloca tu imagen
+Guarda tu imagen (ejemplo: sunset.jpg) en la misma carpeta que el script.
+
+2. Ejecuta el script
+``` 
+python linear_transformation.py
+``` 
+3. Resultado
+Se mostrarán tres imágenes lado a lado:
+* Imagen RGB original: La imagen sin modificaciones
+* Imagen CMY transformada invertida: Se aplica transformación lineal al espacio CMY y luego se invierte (negativo)
+* Imagen RGB transformada: Se aplica transformación lineal directamente al espacio RGB
+
+4. Estructura del código
+* RGB2CMY(img):	Convierte una imagen de RGB a CMY (del módulo anterior)
+* RGB2HSI(img):	Convierte una imagen de RGB a HSI (del módulo anterior)
+* apply_linear_transformation(image, k, color_space):	Aplica una transformación lineal multiplicando los valores de los píxeles por la constante k. Soporta espacios 'RGB', 'CMY' y 'HSI'
+Parámetros de apply_linear_transformation:
+image: Imagen a transformar con valores en rango [0, 255]
+
+k: Constante flotante que multiplica los valores de los píxeles
+
+k > 1: Aclara la imagen
+
+k < 1: Oscurece la imagen
+
+k = 1: Imagen sin cambios
+
+color_space: Espacio de color de la imagen ('RGB', 'CMY', 'HSI')
+
+
+
+Autora:
+Natalia Rendón
+
+Curso:
+Procesamiento de Imágenes
+
+Fecha:
+Abril 2024
 
 
 
